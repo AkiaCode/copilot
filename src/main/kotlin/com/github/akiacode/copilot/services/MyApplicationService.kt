@@ -1,6 +1,6 @@
-package org.jetbrains.plugins.template.services
+package com.github.akiacode.copilot.services
 
-import org.jetbrains.plugins.template.MyBundle
+import com.github.akiacode.copilot.MyBundle
 
 class MyApplicationService {
 
