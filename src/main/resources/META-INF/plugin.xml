@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.github.akiacode.copilot</id>
-    <name>copilot</name>
+    <name>Copilot</name>
     <vendor>akiacode</vendor>
 
     <!-- Product and plugin compatibility requirements -->
@@ -10,7 +10,21 @@
     <extensions defaultExtensionNs="com.intellij">
         <applicationService serviceImplementation="com.github.akiacode.copilot.services.MyApplicationService"/>
         <projectService serviceImplementation="com.github.akiacode.copilot.services.MyProjectService"/>
+        <applicationService serviceImplementation="com.github.akiacode.copilot.settings.AppSettingsState"/>
+        <applicationConfigurable parentId="tools" instance="com.github.akiacode.copilot.settings.AppSettingsConfigurable"
+                                 id="com.github.akiacode.copilot.settings.AppSettingsConfigurable"
+                                 displayName="Copilot: OpenAI Settings"/>
     </extensions>
+
+    <actions>
+        <action id="Copilot.EditorCopilotAction"
+                class="com.github.akiacode.copilot.editor.EditorCopilotAction"
+                text="Using Copliot"
+                description="Get help from Copliot">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="control alt C"/>
+        </action>
+    </actions>
 
     <applicationListeners>
         <listener class="com.github.akiacode.copilot.listeners.MyProjectManagerListener"
