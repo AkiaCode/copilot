@@ -14,7 +14,7 @@
 - [ ] Click the <kbd>Watch</kbd> button on the top of the [IntelliJ Platform Plugin Template][template] to be notified about releases containing new features and fixes.
 
 <!-- Plugin description -->
-This is Copilot
+Copilot, but in intelliJ IDEs. Powered by OpenAI Codex.
 <!-- Plugin description end -->
 
 ## Installation
